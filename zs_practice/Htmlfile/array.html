@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //first question
+
+    //    let  arr1 = [12,34,56,78];
+    //  let   arr2 = [];
+
+    //     for(let i = 0; i< arr1.length; i++){
+    //         arr2[i] = arr1[i]
+    //     }
+
+
+    //     console.log(arr1);
+    //     console.log(arr2);
+
+
+
+   //2nd question number of repeatation of number
+
+//    let arr = [2,4,5,3,2,5,1];
+
+//    let fri = {};
+
+//    for(let i =0; i< arr.length; i++) {
+//     let element = arr[i];
+
+//     if(fri[element]){
+//         fri[element]++
+//     } else{
+//         fri[element] = 1;
+//     }
+//    }
+
+
+//    for(let key in fri){
+//     console.log(`${key} and it's value is ${fri[key]}`)
+//    }
+
+
+   //3rd question
+
+
+// function leftRotateArray(arr, n) {
+//   for (let i = 0; i < n; i++) {
+//     let temp = arr[0];
+//     for (let j = 0; j < arr.length - 1; j++) {
+//       arr[j] = arr[j + 1];
+//     }
+//     arr[arr.length - 1] = temp;
+//   }
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// let rotateBy = 2;
+
+// console.log("Original array:", arr);
+// leftRotateArray(arr, rotateBy);
+// console.log("Array after left rotation:", arr);
+
+
+  //4th question
+
+
+// function sourav (arr) {
+
+//     let friq = {};
+//     let free = [];
+
+//     for(let i =0; i< arr.length; i++) {
+//         let element = arr[i];
+
+//         if(friq[element]){
+
+//             friq[element]++
+//         } else{
+//             friq[element] = 1
+//         }
+//     }
+
+//     for(let key in friq){
+//         if(friq[key] > 1){
+
+//             key = parseInt(key)
+//            free = [...free, key]
+//         }
+//     }
+
+//     return free
+
+// }
+
+// let arr = [1,2,3,4,5,3,2,1];
+
+
+// console.log(sourav(arr))
+
+
+
+  //5th question   print all the element of an array
+
+//   let arr = [1,2,3,4];
+
+//   for(let i =0; i< arr.length; i++){
+//     console.log(arr[i])
+//   }
+
+
+
+
+   //6th question  print all the element of aray in reverse order
+
+  
+
+//    let arr = [1,32,4,5,6,7];
+
+//    for(let i = arr.length-1; i>= 0; i--){
+
+//     console.log(arr[i])
+//    }
+
+
+
+     //7th question  print the even position element
+
+
+//  const sourav = (arr) => {
+   
+
+//     for(let i =0; i< arr.length; i++){
+//         if(i  === 0){
+//               continue;
+//         } else if(i % 2 === 0){
+              
+
+//             console.log(`${i} is ${arr[i]}`)
+//         }
+//     }
+//  }
+
+
+//  let a = [1,2,3,4,5];
+
+//  sourav(a)
+
+
+ //8th question print the odd position element
+
+    // function sourav(arr) {
+  
+
+
+    //     for(let i = 0; i< arr.length; i++) {
+    //         if(i % 2 === 1){
+    //             console.log(`the element ${i}  is ${arr[i]}`)
+    //         }
+    //     }
+    // }
+
+    // let a = [2,3,4,5,6,7,8];
+
+    // sourav(a)
+
+   //9th question largest number of an array
+
+//    function sourav(arr) {
+
+//     let max = arr[0];
+
+//     for(let i = 0; i< arr.length; i++){
+//         if(max< arr[i]){
+
+//             max = arr[i]
+//         }
+//     }
+
+//     console.log(max)
+//    }
+
+//   let arr = [1,2,3];
+
+//    sourav(arr)
+
+
+   //10th question smallest element of an array
+
+
+//    function sourav (arr){
+
+//     let min = arr[0];
+
+//     for(let i =0; i<arr.length; i++){
+//         if(min> arr[i]){
+
+//             min = arr[i]
+//         }
+//     }
+
+//     console.log(min)
+//    }
+
+//    let a = [10,2,3,4,5,6];
+
+//    sourav(a)
+
+
+//11th sum of the element of an array
+
+// function sourav (arr){
+
+//     let sum = 0
+
+//     for(let i = 0; i< arr.length; i++){
+//         sum += arr[i] 
+//     }
+
+//     return sum
+// }
+// let a = [1,2,3];
+// console.log(sourav(a))
+
+
+
+//12th question right rotate of element
+
+
+//   function sourav(arr, n){
+
+    
+
+//     for(let i = 0 ; i< n ; i++) {
+//        let  temp = arr[arr.length -1];
+       
+
+//        for(let j = arr.length -1; j> 0; j--){
+
+//         arr[j] = arr[j-1]
+//        }
+
+//        arr[0] = temp
+
+
+//     }
+//   }
+
+//  let a = [1,2,3];
+//  let n =1
+// sourav(a, n);
+
+// console.log(a)
+
+   //13th question ascending order
+
+//  function sourav(arr){
+
+//     let n = arr.length;
+
+//     for(let i =0; i< n-1; i++){
+//         for(let j = 0; j< n-i-1; j++){
+
+//             if(a[j] > a[j+1]){
+//                 let temp = a[j];
+
+//                 a[j] = a[j+1];
+
+//                 a[j+1] = temp
+//             }
+//         }
+//     }
+
+    
+
+//     return arr
+//  }
+
+// let a = [12,3,4,65,7,78];
+
+// console.log(a)
+
+//  console.log(sourav(a))  ;
+
+
+
+
+
+
+     //14th question decending order
+
+
+
+
+
+
+
+
+    // const sourav = (arr) => {
+
+    //     let n = arr.length;
+
+    //     for(let i =0; i<n-1; i++) {
+
+    //         for(let j = 0; j< n-i-1; j++) {
+
+    //             if(arr[j] < arr[j+1]){
+
+    //                 let temp = arr[j];
+
+    //                 arr[j] = arr[j+1];
+
+    //                 arr[j+1] = temp;
+
+                    
+    //             }
+    //         }
+    //     }
+
+       
+    // }
+
+  
+    // let a = [12,3,45];
+
+    // console.log(a)
+
+    // sourav(a)
+
+    // console.log(a[a.length-2])
+
+
+      //linear searching
+
+//    function sourav(arr, target){
+     
+
+//     for(let i = 0; i< arr.length; i++) {
+//         if(arr[i] === target){
+
+//             return i
+//         } 
+//     }
+
+//     return -1
+
+//    }
+
+//    let a = [12,3,4,56];
+//    let target = 56;
+
+//    let index = sourav(a, target);
+
+//    if(index !== -1){
+//     console.log(`${target} is ${index}`);
+//    } else {
+//     console.log(`${target} is not found`);
+//    }
+
+
+  //
+
+
+//   let a = [34, 2, 34, 4, 2];
+// let n = a.length;
+
+// // Bubble sort to sort the array
+// for (let i = 0; i < n-1; i++) {
+//     for (let j = 0; j < n-i-1; j++) {
+//         if (a[j] > a[j+1]) {
+//             // Swap a[j] and a[j+1]
+//             let temp = a[j];
+//             a[j] = a[j+1];
+//             a[j+1] = temp;
+//         }
+//     }
+// }
+
+// console.log("Sorted array:", a);
+
+// // Remove duplicates
+// let j = 0;
+// for (let i = 0; i < n-1; i++) {
+//     if (a[i] != a[i+1]) {
+//         a[j++] = a[i];
+//     }
+// }
+// a[j++] = a[n-1];
+
+// // Resize array to remove duplicates
+// a.length = j;
+
+// console.log("Array with duplicates removed:", a);
+
+
+
+
+
+//15th question eliminate duplicate element of array
+
+
+
+
+// function sourav(arr){
+
+//     let unique = [];
+
+//     for(let i = 0; i< arr.length; i++){
+         
+//         let isduplicate = false;
+
+//         for(let j = 0; j<unique.length; j++){
+//             if(arr[i] === unique[j]){
+//                 isduplicate = true;
+
+//                 break;
+//             }
+//         }
+
+//         if(!isduplicate){
+//             unique = [...unique, a[i]];
+//         }
+
+//     }
+
+//    return unique
+// }
+
+
+// let a = [1,2,2,3,4,2,4,5];
+
+
+// console.log(a)
+// console.log(sourav(a))
+    
+
+
+//16th question print odd and even number from an array
+
+
+
+// function sourav(arr){
+
+//     let odda = [];
+//     let evena = [];
+
+//     for(let i = 0; i<arr.length; i++){
+//         if(arr[i] % 2 === 0){
+//             evena = [...evena, arr[i]];
+
+//             console.log( `even number ${arr[i]}`)
+
+//         }else {
+//             odda = [...odda, arr[i]];
+//             console.log(`odd number ${arr[i]}`)
+//         }
+//     }
+
+//     return  { evena, odda};
+
+
+    
+// }
+
+
+// let a = [1,2,3,4,5,6];
+
+// console.log(sourav(a))
+
+
+
+
+        //17th question sorting array in assanding order
+        
+        
+
+
+
+
+//         Input: arr = [1,9,6,3,2], size = 3
+// Output: [[1,9,6],[3,2]]
+// Explanation: The arr has been split into subarrays with 3 elements. However, only two elements are left for the 2nd subarray.
+       
+
+// function sourav (arr, size){
+//    var arr1 ;
+//    var arr2 ;
+//    var arr3;
+
+//    for(let i =0; i< arr.length; i++){
+//       for(let j = 0; j < size; j++){
+//          arr1 = arr[j];
+         
+//       }
+
+   
+
+//    }
+
+//     for(let i = size-1; i<arr.length; i++){
+//         arr2 = arr[i]
+//     }
+
+//     arr3 = [arr1, arr2];
+//     return arr3 ;
+
+   
+// }
+
+//    let a = [1,2,3,4,5,6];
+
+//    let n = 3;
+
+//    console.log(sourav(a, n))
+
+
+// function sourav(name){
+//    alert(`my name is ${name}`)
+// };
+
+// function lipun(callback){
+//   const name = prompt("plz enter your name.");
+//   callback(name)
+// };
+
+// lipun(sourav);
+
+
+
+//fabonacci series
+
+
+// function fabocani(n){
+
+// let fgt = [];
+
+// fgt[0] = 0;
+// fgt[1] = 1;
+
+// for(let i = 2; i< n; i++){
+//   fgt[i] = fgt[i-1] + fgt[i-2];
+
+
+// }
+
+// return fgt;
+
+// }
+
+// var x = 10;
+
+// console.log(`the fabonaci of x is ${fabocani(x)}`);
+
+
+// function sdf(n){
+
+//    if(n <= 1){
+//     return false;
+//    }
+
+//    if(n === 2){
+//     return true;
+//    }
+
+
+//    for(let i = 2; i< n ; i++){
+//     if(n % i === 0){
+//         return false
+//     };
+//     return true
+//    }
+// }
+
+// let x = 17;
+
+// console.log(sdf(x))
+
+function rtt(arr){
+  let start = 0;
+  let end = arr.length -1;
+
+ while(start < end){
+
+  if(rtt[start]> rtt[end]){
+    return false;
+  }
+
+  start++;
+  end--;
+
+ }
+
+ return true
+
+}
+
+let ury = "madam";
+console.log(ury)
+console.log(rtt(ury));
+       
+
+
+    </script>
+</head>
+<body>  
+
+
+    
+</body>
+</html>

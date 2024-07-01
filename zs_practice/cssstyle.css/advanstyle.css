@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000, #2C3E50);
+
+
+}
+
+
+
+#main-heading{
+    text-align: center;
+    color: #fff;
+}
+
+.container{
+    margin: 2rem;
+    height: 50vh;
+    width: 90vw;
+    border: 1px solid #ebe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.hidden-content{
+    color: #fff;
+    margin: 2%;
+    text-align: center;
+    line-height: 150%;
+    display: none;
+
+}
+
+.reveal-btn{
+    height: 9vh;
+    width: 17vw;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}

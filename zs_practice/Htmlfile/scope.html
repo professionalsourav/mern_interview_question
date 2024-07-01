@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interview prep</title>
+
+    <script>
+
+
+  //2.break and continue of loop
+
+    //   function sourav (arr){
+    //     for(let i=0;i<=arr.length;i++){
+    //       if(i===2){
+    //         break;
+
+    //       }
+
+    //         console.log(i)
+          
+    //     }
+    //   }
+
+    // const a = [1,2,3,4,5];
+
+    //   sourav(a)
+
+
+    //   function lipun(rty){
+
+    //     for(let i =0; i<=rty.length;i++){
+    //       if(i === 2){
+    //         continue;
+    //       }
+    //        console.log(i)
+          
+    //     }
+        
+        
+    //   }
+
+
+    
+    //  lipun(a)
+
+
+      
+      //  function outerfunction() {
+
+      //   let x = "hello";
+
+      //    function innerfunction() {
+
+      //         console.log(x)
+
+      //     }
+
+      //     return innerfunction;
+
+      //  }
+
+      //  let inner = outerfunction();
+      //  inner();
+
+      // const person = {
+      //     age: 23,
+      //     name: "sourav",
+      //     gender: "male",
+      //     adress: {
+      //         zipcode: 756001,
+      //         ps: "sahadevkhunta"
+      //     }
+      // }
+
+      // const {age, name, gender, adress: {zipcode, ps}} = person;
+      // console.log(name);
+      // console.log(age);
+      // console.log(gender);
+      // console.log(zipcode);
+      // console.log(ps)
+
+      // const billo = ({name, age, adress: {ps}}) => {
+      //     console.log(`hello my name is ${name} and police station is ${ps}`);
+      // }
+
+      // billo(person)
+
+      // const [first, last, ...rest] = [1,2,4,8,8,9,45,56];
+
+      // console.log(first);
+      // console.log(last);
+      // console.log(rest);
+
+      // const {firstname, lastname, ...person} = {
+      //     firstname: "sourav",
+      //    lastname: "kumar",
+      //     age: 34,
+      //     group: "chutiya"
+      //  }
+
+      //  console.log(firstname);
+      //  console.log(lastname);
+      //  console.log(person);
+
+    //  const skcy = [1,3,4,5];
+     
+
+    //  const [a,e,d,f,g] = [...skcy]  ;
+    // //  console.log(a);
+
+    //  const ree = [...skcy, 56,67,78];
+    //    console.log(ree);
+
+    //    const tgyhu = [1,4,5,6,43,90];
+    //    const [x,y,u, ...tyu] = tgyhu;
+    //    console.log(tyu)
+
+
+      // const sourav = async () => {
+      //   try {
+      //     const res = await fetch(
+      //       "https://jsonplaceholder.typicode.com/posts",
+      //       {
+      //         method: "GET",
+      //         mode: "cors",
+      //         headers: {
+      //           "Content-Type": "application/json",
+      //         },
+      //       }
+      //     );
+      //     const data = await res.json();
+      //     console.log(data);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // };
+
+      // sourav();
+
+      /* fetching data using promise */
+
+      // const lambu = fetch("https://jsonplaceholder.typicode.com/posts",             {
+      //         method: "GET",
+      //         mode: "cors",
+      //         headers: {
+      //           "Content-Type": "application/json",
+      //         },
+      //       })
+
+
+      //       lambu.then((res)=> res.json()).then((res)=> {
+      //          for (let data of res) {
+      //                console.log(`the answer is ${data. title}`)
+      //          }
+      //         }
+      //     )
+      //       .catch((err)=> console.log(err))
+
+      // console.log(c);
+      // sourav(c);
+
+      // var c = 45
+
+      // function sourav (x) {
+      //     console.log("first")
+      //     return x
+      // }
+
+      // console.log(sourav(c))
+
+      // const array = ["apple", "bamama", "hero", "uyvi"];
+
+      //    const define = array.slice(1, 4);
+      //    console.log(define);
+
+      //    const cde = array.slice(-1)
+      //    console.log(cde);
+
+      //    const ert = array. slice(1);
+      //    console.log(ert)
+
+      // (function (){
+
+      //     var x = 15
+      //     console.log("hello")
+      // })()
+
+      // console.log(x)
+
+      // var y = "global"
+      // function outer() {
+      //     var x = "outer"
+
+      //     function inner() {
+      //         var z = "inner"
+      //         console.log(x)
+      //         console.log(y)
+      //         console.log(z)
+      //     }
+
+      //     inner()
+      // }
+
+      // outer()
+
+      // var x = 20;
+
+      // const sourav = () => {
+      //     var x = 10;
+
+      //     console.log(x);
+
+      // }
+
+      // sourav();
+
+      // console.log(x)
+
+      // const x = [12, 3,4,5,6];
+
+      // const we  = x.map((num) => num*5);
+
+      // console.log(we)
+
+      // const y = [2,4,566,23,54,5];
+
+      // const fil = y.filter((num) =>
+
+      // num % 2  !== 0);
+
+      // console.log(fil)
+
+      // const z = [23,45,3,45,67];
+
+      // const red = z.reduce((acc, sum) => acc+ sum, 0);
+
+      // console.log(red)
+
+      // function palindrom(str) {
+
+      //     let start = 0;
+
+      //     let end = str.length -1;
+
+      //     while(start < end) {
+
+      //         if( str[start] !== str[end]){
+
+      //             return false
+      //         }
+      //          start ++;
+      //          end --;
+
+      //     }
+
+      //     return true
+      // }
+
+      // console.log(palindrom("madam"))
+      // console.log(palindrom("aha"))
+      // console.log(palindrom("hello"))
+
+      // function mergeArrays(arr1, arr2) {
+      //     // Create an empty array to store the merged elements
+      //     let mergedArray = [];
+
+      //     // Iterate over each element in the first array
+      //     for (let i = 0; i < arr1.length; i++) {
+      //         let element = arr1[i];
+      //         let isDuplicate = false;
+
+      //         // Check if the element is already in the merged array
+      //         for (let j = 0; j < mergedArray.length; j++) {
+      //             if (element === mergedArray[j]) {
+      //                 isDuplicate = true;
+      //                 break;
+      //             }
+      //         }
+
+      //         // If the element is not a duplicate, add it to the merged array
+      //         if (!isDuplicate) {
+      //             mergedArray.push(element);
+      //         }
+      //     }
+
+      //     // Iterate over each element in the second array
+      //     for (let i = 0; i < arr2.length; i++) {
+      //         let element = arr2[i];
+      //         let isDuplicate = false;
+
+      //         // Check if the element is already in the merged array
+      //         for (let j = 0; j < mergedArray.length; j++) {
+      //             if (element === mergedArray[j]) {
+      //                 isDuplicate = true;
+      //                 break;
+      //             }
+      //         }
+
+      //         // If the element is not a duplicate, add it to the merged array
+      //         if (!isDuplicate ) {
+      //             mergedArray.push(element);
+      //         }
+      //     }
+
+      //     return mergedArray;
+      // }
+
+      // // Test the function
+      // const arr1 = [1, 2, 3,8,  4];
+      // const arr2 = [8, 5, 6, 7];
+      // console.log(mergeArrays(arr1, arr2)); // Output: [1, 2, 3, 4, 5, 6, 7]
+
+      // function dupli(arr1, arr2) {
+      //     let merg = [];
+
+      //     for(let i = 0; i<arr1.length; i++) {
+      //         let element = arr1[i];
+      //         let isDuplicate = false;
+
+      //         for(let j =0; j< merg; j++) {
+      //             if(element === merg[j]){
+      //                 isDuplicate = true;
+      //                 break;
+      //             }
+      //         }
+
+      //         if(!isDuplicate){
+      //             merg.push(element)
+      //         }
+      //     }
+
+      //     for(let i = 0; i<arr2.length; i++) {
+      //         let element = arr2[i];
+      //         let isDuplicate = false;
+
+      //         for(let j =0; j< merg; j++) {
+      //             if(element === merg[j]){
+      //                 isDuplicate = true;
+      //                 break;
+      //             }
+      //         }
+
+      //         if(!isDuplicate){
+      //             merg.push(element)
+      //         }
+      //     }
+
+      //     return merg
+      // }
+
+      // a = [2,3,4,5,6];
+
+      // b= [4,56,7];
+
+      // console.log(dupli(a,b)) //[2,3,4,5,6,56,7]
+
+      // function singdulpi(arr) {
+      //     let newarr = [];
+
+      //     for(let i =0; i<arr.length; i++) {
+      //         let isDuplicate = false;
+
+      //         let element = arr[i]
+      //         for(let j = 0; j< newarr.length; j++) {
+      //             if(element === arr[j]){
+
+      //                 isDuplicate = true
+      //                 break;
+      //             }
+      //         }
+
+      //         if(!isDuplicate){
+
+      //             newarr.push(element)
+
+      //         }
+
+      //     }
+
+      //     return newarr;
+      // }
+
+      // let c = [2,4,5,2,4,5];
+
+      // console.log(singdulpi(c))
+
+      //
+
+      // let arr= [10,5,22,12,7];
+
+      // let element =0
+
+      // for(let i =0; i < arr.length; i++){
+
+      //     for(let j=0; j< arr.length; j++){
+
+      //         if(arr[i] < arr[j]){
+
+      //             element = arr[j];
+      //         }
+      //     }
+      // }
+
+      // console.log(element)
+
+      // let str = "avavslelfes";
+
+      // function strin(...trr) {
+
+      //   let  arr = trr;
+
+      //   let element = ""
+
+      //   for(let i=0; i< arr.length; i++){
+
+      //       let isDuplicate = false
+
+      //     for(let j=0; j< arr.length; j++){
+
+      //         if(arr[i] === arr[j]){
+      //             isDuplicate= true
+      //             break;
+      //         }
+
+      //     }
+
+      //     if(!isDuplicate){
+      //         element = arr[i]
+      //     }
+      //   }
+
+      //   return arr
+
+      // }
+
+      // console.log(str)
+
+      // let arr = [12,45,67,23,56];
+
+      // let max = arr[0];
+
+      // for(let i = 1; i <arr.length; i++){
+      //     if(arr[i]> max){
+      //         max = arr[i];
+      //     }
+      // }
+
+      // console.log(max)
+
+      //object
+
+      // let property= "firstname";
+
+      // let lastname = "kumar";
+      // const name = "heroooo"
+      // const user = {
+      //      property,
+      //     [property]: lastname,
+      //     name,
+      //     age: 24,
+      //     "hello this is new ": "ok it is new"
+      // }
+
+      // for(let key in user){
+      //     console.log(user[key])
+      // }
+
+      // user["age"] = 27
+      // delete user["hello this is new "]
+
+      // delete user.age
+
+      // console.log(user)
+
+      // console.log(user.property)
+
+      // const obj = {
+      //     a: "one",
+      //     b: "two",
+      //     a: "three"
+      // }
+
+      // console.log(obj)
+
+      // let nums = {
+      //     a : 200,
+      //      b: 100,
+      //      c: "sourav"
+
+      // }
+
+      // function sourav(obj){
+      //     for(let key in obj){
+
+      //         if(typeof obj[key] === "number"){
+
+      //             obj[key] *= 2
+      //         }
+      //     }
+
+      //     return obj
+      // }
+
+      // console.log(sourav(nums))
+
+      // const a = {
+      //     name: "sourav",
+      //     age: 27,
+      // }
+
+      // let objstr = JSON.stringify(a);
+      // localStorage.setItem("test",objstr)
+
+      //    const jjj =  JSON.parse(localStorage.getItem("test"));
+
+      //    console.log(jjj)
+
+      // console.log(` local storage ${localStorage.getItem("test")}`)
+
+      // console.log(objstr)
+
+      // console.log(a)
+
+      // const objrr = JSON.parse(objstr);
+
+      // console.log(objrr)
+
+      // const user = {
+      //     name: "sourav",
+      //     age: 27,
+      //     fullname: {
+      //         first: "lipun",
+      //         last: "babunu"
+      //     },
+
+      //     group: function(req,res){
+      //      req = "plz help me";
+
+      //      console.log(req)
+      //     }
+      // };
+
+      // const name = "hello"
+
+      // const {fullname: {first, last}} = user
+
+      // console.log(first)
+      // console.log(last)
+
+      // const {name: myname} = user;
+
+      // console.log(myname);
+
+      // console.log(user.group())
+
+      // let person = {
+      //     "name": "lediya"
+      // }
+
+      // const memb = person
+
+      // console.log(memb)
+
+      // const a = [6,1,2,3,7,8,9];
+      // let k = 12
+
+      // function amit(arr, n){
+
+      //     for(let i =0; i< arr.length; i++){
+
+      //         for(let j = i+1; j<arr.length; j++){
+      //             if(arr[i] + arr[j] === n){
+      //                 console.log(arr[i], arr[j])
+      //             }
+      //         }
+      //     }
+      // }
+
+      // amit(a, k)
+
+      // function sourav(arr){
+      //     let newstr = "";
+      //     for(let i = arr.length -1 ; i>= 0; i--){
+      //         newstr = newstr + arr[i]
+      //     }
+
+      //     return newstr;
+      // }
+
+      // console.log(sourav("hello"))
+
+      // function sourav(arr, n){
+
+      //    let newarr
+
+      //     for(let i = 0; i< n; i++){
+
+      //      newarr = [...newarr, arr[i]]
+
+      //     }
+
+      // }
+
+      // const obj = {
+      //   value: 42,
+      //   regularMethod: function () {
+      //     setTimeout(function () {
+      //       console.log("Regular method's this", this.value);
+      //     }, 1000);
+      //   },
+      //   arrowMethod: function () {
+      //     setTimeout(() => {
+      //       console.log("Arrow method's this", this.value);
+      //     }, 1000);
+      //   },
+      // };
+      // obj.regularMethod();
+      // obj.arrowMethod();
+
+      // function sourav( arr, n){
+      //   for(let i =n; i< arr; i++){
+      //     arr[]
+      //   }
+      // }
+
+      // const dgdg = document.getElementsByClassName("box");
+      // console.log(dgdg);
+
+      // const egg = document.getElementById('khh');
+      // console.log(egg);
+
+
+    //  const sourav = new Promise((res, rej)=>{
+
+    //   setTimeout(() => {
+
+    //             let x = 10;
+    //   if(x> 6){
+    //     res(x)
+    //   }
+    //   else{
+    //     rej()
+    //   }
+        
+    //   }, 1000);
+
+    //  })
+
+    //  console.log("it is running");
+
+    //  sourav.then((x)=>{
+    //   console.log(`resolve ${x}`)
+
+
+    //   console.log(x+10)
+    //  }).catch("reject")
+
+
+
+
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="../cssstyle.css/Scopestyle.css" />
+    <style>
+       table,th, td{
+        border: 1px solid black;
+        text-align: center;
+        font-size: 2rem;
+       }
+      
+    </style>
+  </head>
+  <body>
+
+    <!-- <script src="../Jsfolder/12may20mayFunction.js"></script> -->
+    <!-- <script src="../Jsfolder//15thmay25thmayArray.js"></script> -->
+     <script src="../Jsfolder//TheoryInterviewqiestion.js"></script>
+    <span id="khh"> hellloooo </span>
+
+    <header>
+      <div class="heading">
+        <h1 class="head">my goal of this year</h1>
+      </div>
+
+      <!-- <nav>
+    <a href="" style="text-decoration: none;  color: rgb(63, 214, 49); background-color: aqua;">hello world</a>
+  </nav> -->
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="box"><p class="writ">sourav</p></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </main>
+    <br/>
+     <br/>
+      <br/>
+    <section>
+     <table style="width: 100%;">
+      <caption>infomation about important person</caption>
+      <thead style="vertical-align: bottom;">
+      <tr style="height: 100px;">
+        <th>no.</th>
+         <th>name</th>
+          <th>age</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          sourav
+        </td>
+        <td>26</td>
+      </tr>
+
+       <tr>
+        <td>
+          2
+        </td>
+        <td>
+          lipun
+        </td>
+        <td>34</td>
+      </tr>
+       <tr>
+        <td>
+          3
+        </td>
+        <td>
+          raju
+        </td>
+        <td>54</td>
+      </tr>
+      </tbody>
+     </table>
+    </section>
+
+
+   <article>
+
+
+   <ol type="i">
+    <li>hello</li>
+      <li>hye</li>
+        <li>why</li>
+        <li>where</li>
+        <li>which</li>
+        <li>wherever</li>
+   </ol>
+
+   <ul style="list-style-type: circle;">
+    <li>huyr</li>
+    <li>ffg</li>
+    <li>uik;ol</li>
+   </ul>
+   </article>
+
+
+  </body>
+</html>

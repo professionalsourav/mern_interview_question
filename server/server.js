@@ -6,59 +6,59 @@ import upload from "./multer.js";
 import proFs from "fs/promises"
 import path from "path";
 
-// //1. what is eventEmitter and how it is used ?
+//1. what is eventEmitter and how it is used ?
 
 
-// const event = new Eventemitter();
-// event.on("click",(data)=>{
-//     console.log(`eevnt listened ${data.mess}`)
-// })
-// event.emit("click", {mess:"clicked"})
+const event = new Eventemitter();
+event.on("click",(data)=>{
+    console.log(`eevnt listened ${data.mess}`)
+})
+event.emit("click", {mess:"clicked"})
 
-// let count = 0;
+let count = 0;
 
-// //2.read nodejs file ?
+//2.read nodejs file ?
 
-// //async way
+//async way
 
-// Fs.readFile("./read/readme.txt", "utf8", (err,data)=>{
-//     if(err){
-//         console.log(new Error(err))
-//         return;
-//     }
-//         console.log( data)
+Fs.readFile("./read/readme.txt", "utf8", (err,data)=>{
+    if(err){
+        console.log(new Error(err))
+        return;
+    }
+        console.log( data)
     
-// })
+})
 
-// //syncronus way
-// try {
+//syncronus way
+try {
 
-//     const data = Fs.readFileSync("./read/readme.txt", "utf8");
+    const data = Fs.readFileSync("./read/readme.txt", "utf8");
 
-//     console.log({ syncdata: data });
+    console.log({ syncdata: data });
     
-// } catch (error) {
+} catch (error) {
 
-//     console.log("the error we are getting is", error)
+    console.log("the error we are getting is", error)
     
-// }
+}
 
-// //using promise async function
+//using promise async function
 
-// async function readingpro(data){
-//     try {
-//         const readingfile = await proFs.readFile("./read/readme.txt", "utf8");
+async function readingpro(data){
+    try {
+        const readingfile = await proFs.readFile("./read/readme.txt", "utf8");
 
-//         console.log({"reading file using promise": readingfile})
+        console.log({"reading file using promise": readingfile})
         
-//     } catch (error) {
+    } catch (error) {
 
-//         console.log(error)
+        console.log(error)
         
-//     }
-// }
+    }
+}
 
-// readingpro()
+readingpro()
 
 //3. what is multer ?
 

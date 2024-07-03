@@ -71,4 +71,102 @@ const send = new Promise((reslove, reject) => {
 
 Promise.all([first, send]).then((data)=>{console.log(data)}).catch((e)=>{console.log(e.message)})
 
+//4. what is closure ?
+
+function ouerf(x,y){
+    
+    
+   const z = 45
+
+    function innerf(){
+        return {x,y,z}
+
+    }
+    return innerf
+}
+
+let g = ouerf(12,56);
+
+let {x,y,z} = g();
+console.log(x,y,z)
+
+
+//5. what is callback function ?
+
+function tyt(callback){
+
+    var mk = 56; 
+    return callback(mk)
+}
+
+function tyu(info){
+    console.log("hello world "+info)
+}
+
+tyt(tyu)
+
+//implementing timeout
+
+function alr(callback){
+    console.log("immplement timeout");
+
+    setTimeout(()=>{
+        callback("here i am implementing for last time")
+    },1000)
+}
+
+function ooo(data){
+
+    console.log(`here i am getting data which is ${data}`)
+
+}
+
+alr(ooo)
+
+//using foreach
+
+var xarr = [1,2,3,4];
+
+function jku(callback){
+
+    console.log("we are performing callback");
+
+    xarr.forEach(callback)
+}
+
+function itt(number){
+
+    console.log(`numbers are ${number}`)
+}
+
+jku(itt)
+
+
+//6. what is hoisting ?
+
+
+console.log(sdt(12))
+whatdo()
+console.log(ho)
+var ho;
+
+ho = 6;
+
+function whatdo (){
+    console.log("hiii")
+}
+
+function sdt (x){
+  return x
+}
+
+// console.log(xvbn)
+
+// let xvbn = 56;
+
+// console.log(nmhj)
+// const nmhj = 67;
+
+let bnbn = 678;
+console.log(bnbn)
 

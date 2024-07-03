@@ -153,3 +153,184 @@ function outerFunction() {
 const inner = outerFunction(); // inner is now a closure
 inner(); // Output: I am from the outer function
 ```
+question
+
+```
+6. what is callback ?
+```
+answer
+
+```
+when a function is called inside another function as a varible , we call it callback function
+
+Example of callback function :- 
+
+  // Define a function that takes a callback as an argument
+function fetchData(callback) {
+    // Simulate a delay with setTimeout
+    setTimeout(() => {
+        console.log('Data fetched');
+        // Execute the callback function
+        callback();
+    }, 2000); // 2-second delay
+}
+
+// Define a callback function
+function processData() {
+    console.log('Processing data');
+}
+
+// Call fetchData and pass processData as a callback
+fetchData(processData);
+```
+
+question
+
+```
+7. what is hoisting ?
+```
+answer
+
+```
+Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their containing scope during the compile phase, before the code is executed. This means you can use variables and functions before they are declared in your code.
+
+Variable Hoisting
+For variables declared with var, the declaration is hoisted to the top of its function or global scope, but not the assignment.
+
+Example:
+
+javascript
+Copy code
+console.log(myVar); // Output: undefined
+var myVar = 5;
+console.log(myVar); // Output: 5
+In this example, the declaration var myVar; is hoisted to the top, so console.log(myVar); before the assignment logs undefined. The assignment myVar = 5; is not hoisted.
+
+Function Hoisting
+Function declarations are hoisted entirely, meaning you can call a function before you define it in your code.
+
+Example:
+
+javascript
+Copy code
+sayHello(); // Output: Hello!
+
+function sayHello() {
+    console.log('Hello!');
+}
+In this example, the entire function sayHello is hoisted, so you can call it before its definition.
+
+let and const Hoisting
+Variables declared with let and const are also hoisted, but unlike var, they are not initialized with undefined. They are placed in a "temporal dead zone" from the start of the block until the declaration is encountered, making it an error to access them before they are declared.
+
+Example:
+
+javascript
+Copy code
+console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
+let myLet = 5;
+
+console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
+const myConst = 10;
+In this example, accessing myLet and myConst before their declarations results in a ReferenceError.
+```
+question
+
+```
+8. what is difference between "var", "let" and "const" ?
+```
+answer
+
+```
+In JavaScript, var, let, and const are used to declare variables, but they have different characteristics and behaviors. Here are the key differences:
+
+var 👍
+
+
+Scope:
+
+var is function-scoped, meaning it is accessible within the function it is declared in.
+If declared outside any function, it has global scope.
+Hoisting:
+
+Variables declared with var are hoisted to the top of their scope and initialized with undefined.
+Re-declaration:
+
+You can re-declare a var variable within the same scope without an error.
+Global Object Property:
+
+Variables declared with var at the global level become properties of the global object (e.g., window in browsers).
+Example:
+
+javascript
+Copy code
+console.log(x); // Output: undefined
+var x = 10;
+var x = 20; // No error
+console.log(x); // Output: 20
+
+
+
+
+
+let 👍
+
+
+
+
+Scope:
+
+let is block-scoped, meaning it is accessible only within the block (enclosed by {}) it is declared in.
+Hoisting:
+
+Variables declared with let are hoisted but not initialized. They are in a "temporal dead zone" from the start of the block until the declaration is encountered, which results in a ReferenceError if accessed before declaration.
+Re-declaration:
+
+You cannot re-declare a let variable within the same scope.
+Example:
+
+javascript
+Copy code
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+y = 20; // Allowed
+// let y = 30; // SyntaxError: Identifier 'y' has already been declared
+console.log(y); // Output: 20
+
+
+
+
+
+const 👍
+
+
+
+
+Scope:
+
+const is block-scoped, similar to let.
+Hoisting:
+
+Variables declared with const are hoisted but not initialized. They are also in a "temporal dead zone" until the declaration is encountered.
+Re-declaration and Re-assignment:
+
+You cannot re-declare a const variable within the same scope.
+You cannot re-assign a const variable after it has been assigned a value. However, if the const variable is an object or array, the properties of the object or elements of the array can be modified.
+Example:
+
+javascript
+Copy code
+console.log(z); // ReferenceError: Cannot access 'z' before initialization
+const z = 10;
+// z = 20; // TypeError: Assignment to constant variable
+const obj = { a: 1 };
+obj.a = 2; // Allowed
+console.log(obj.a); // Output: 2
+Summary
+Scope: var is function-scoped, while let and const are block-scoped.
+Hoisting: var variables are hoisted and initialized with undefined. let and const variables are hoisted but not initialized, leading to a "temporal dead zone."
+Re-declaration: var can be re-declared within the same scope, but let and const cannot.
+Re-assignment: let can be re-assigned, while const cannot be re-assigned, though the contents of objects and arrays declared with const can be modified.
+These differences are crucial for understanding how to properly declare and use variables in different contexts in JavaScript.
+```
+

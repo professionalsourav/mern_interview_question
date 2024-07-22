@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript practice question</title>
+  </head>
+  <body>
+    <!-- <script src="../Jsfolder/javascript_practice/Loop.js"></script> -->
+    <!-- <script src="../Jsfolder/javascript_practice/Function.js"></script> -->
+
+    <div style="display: flex; align-items: center">
+      <p>search:</p>
+      <input
+        style="height: 5vh"
+        type="text"
+        
+        onkeyup="Betterfunction()"
+      />
+      <button style="margin-left: 1%; height: 6vh">click</button>
+    </div>
+    <br />
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <button
+        class="increment_btn"
+        style="text-transform: capitalize; cursor: pointer"
+      >
+        increment
+      </button>
+
+         <button
+        class="increment_throttle_btn"
+        style="text-transform: capitalize; cursor: pointer; margin-top: 1vh;"
+      >
+        increment throttle
+      </button>
+      <p style="text-transform: capitalize">
+        button pressed <span class="increment_pressed">0</span> time
+      </p>
+      <p style="text-transform: capitalize">
+        Triggered <span class="increment_count">0</span> times
+      </p>
+      <p style="text-transform: capitalize">the throttling time will be <span class="increment_throttle">0</span> times</p>
+    </div>
+
+    <input type="text" id="search" placeholder="Search...">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../Jsfolder/javascript_practice/Debouncing_throttling_eventLoop.js"></script>
+   
+
+
+
+
+    <script>
+    function search(query) {
+        console.log('Searching for:', query);
+        // Perform the search operation (e.g., API call)
+    }
+
+    const debouncedSearch = debounce(search, 1000);
+
+    document.getElementById('search').addEventListener('input', (event) => {
+        debouncedSearch(event.target.value);
+    });
+
+    function debounce(func, delay) {
+        let timer;
+        return function(...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    }
+</script>
+  </body>
+</html>

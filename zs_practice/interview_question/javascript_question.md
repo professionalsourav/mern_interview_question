@@ -12,7 +12,7 @@ answer
 In JavaScript, == is the equality operator, which checks for equality of two values after converting them to a common type. This process is known as type coercion. For example:
 
 javascript
-Copy code
+
 1 == '1' // true, because '1' is converted to a number
 On the other hand, === is the strict equality operator, which checks for equality without performing any type conversion. Both the value and the type of the operands must be the same for === to return true. For example:
 

@@ -1,12 +1,12 @@
-1st question
+//1st question
 
-function sourav(n,b){
-    let tyu = [n,b];
-    return tyu;
-}
+// function sourav(n,b){
+//     let tyu = [n,b];
+//     return tyu;
+// }
 
 
-console.log(sourav(1,2))
+// console.log(sourav(1,2))
 
 //2nd question
 

@@ -9,24 +9,27 @@ for(let i=0; i<34;i++){
 
 //if else
 
-function ifelsefun(x){
+function calculateGrade(score) {
+    if (score >= 90) {
+      return "Grade: A";
+    } else if (score >= 80) {
+      return "Grade: B";
+    } else if (score >= 70) {
+      return "Grade: C";
+    } else if (score >= 60) {
+      return "Grade: D";
+    } else {
+      return "Grade: F";
+    }
+  }
+  
+  // Test the function
+  console.log(calculateGrade(95)); // Output: Grade: A
+  console.log(calculateGrade(85)); // Output: Grade: B
+  console.log(calculateGrade(75)); // Output: Grade: C
+  console.log(calculateGrade(65)); // Output: Grade: D
+  console.log(calculateGrade(50)); // Output: Grade: F
 
-    if(x>100){
-        console.log("it is greater then 100");
-    }
-    else if(x<100 && x>80){
-        console.log("it is in between 100 and 80");
-    }
-    else if(x<80 && x>60){
-        console.log("it is in between 80 and 60");
-    }
-    else{
-        console.log("it is below 60")
-    }
-
-}
-
-ifelsefun(80)
 
 //ternary operator
 

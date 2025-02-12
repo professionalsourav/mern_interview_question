@@ -1,0 +1,101 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+   min-height: 100vh;
+   background-color: aliceblue;
+   /* background-image: url("../img_folder/pv1.jpg"),linear-gradient(steelblue, #fff);
+   background-size: 20%, auto;
+   background-repeat: no-repeat, no-repeat;
+   background-position: bottom center;
+    */
+}
+
+/* utility classes */
+.nowrap{
+    white-space: nowrap;
+}
+
+.offscreen{
+    position: absolute;
+    left: -100000px;
+
+}
+
+.container{
+
+    background-color: rgb(251, 210, 156);
+        background-image: url("../img_folder/himalaya.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+.hero {
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start ;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 0%, 0.25);
+
+  
+  
+}
+
+.h1{
+    font-size: 500%;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px #000;
+    /* background-color: #0000004a;
+    padding: 0.25rem;
+    border-radius: 10px; */
+}
+
+.profile-pic-figure {
+    width: 35%;
+
+}
+
+
+.profile-pic-figure img {
+
+width: 100%;
+height: auto;
+min-width: 100px;
+border: 5px double gray;
+border-radius: 50%;
+}
+
+.example{
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+   
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url("../img_folder/holi.jpg");
+    background-size: 100%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #00000020;
+}
